@@ -1,0 +1,260 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6ef;
+    color: #344638;
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    background: #72896b;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+/* Navigation */
+nav {
+    background: #e5eadf;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 12px;
+    color: #344638;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #82986e;
+}
+
+/* Main content */
+main {
+    width: 100%;
+    padding: 25px 5%;
+}
+
+section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #3446380d;
+    scroll-margin-top: 20px;
+}
+
+h2 {
+    color: #627e59;
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #435b43;
+    margin-bottom: 8px;
+}
+
+/* Beauty tips */
+.tip {
+    background: #f3f6ee;
+    padding: 18px;
+    margin: 15px 0;
+    border-left: 4px solid #91a582;
+    border-radius: 6px;
+}
+
+/* Product cards */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product {
+    background: #eef2e8;
+    padding: 25px 18px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e0e7d8;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+}
+
+.product::before {
+    content: "✿";
+    display: block;
+    color: #72896b;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Form controls */
+label {
+    display: block;
+    font-weight: 600;
+}
+
+input:not([type="radio"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #d5ddcf;
+    border-radius: 6px;
+    background: #fcfdf9;
+    color: #344638;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #a9bd9c;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.counter {
+    margin: -8px 0 12px;
+    font-size: 0.9rem;
+    color: #667367;
+}
+
+/* Buttons */
+button {
+    padding: 11px 20px;
+    margin: 8px 5px 8px 0;
+    background: #72896b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #536d4e;
+}
+
+#result,
+#productMessage {
+    color: #536d4e;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Footer */
+footer {
+    background: #344638;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+footer a {
+    color: #dce8d3;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode */
+body.dark {
+    background: #202b23;
+    color: #edf1e8;
+}
+
+body.dark nav,
+body.dark section {
+    background: #2b392e;
+}
+
+body.dark nav a,
+body.dark h3 {
+    color: #dce8d3;
+}
+
+body.dark h2 {
+    color: #b8c9a7;
+}
+
+body.dark .tip,
+body.dark .product {
+    background: #354638;
+    border-color: #455b47;
+}
+
+body.dark section p,
+body.dark #result,
+body.dark #productMessage {
+    color: #d1ddcc;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #202b23;
+    color: white;
+    border-color: #536d4e;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        margin: 5px 8px;
+    }
+
+    main {
+        padding: 20px 3%;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+}

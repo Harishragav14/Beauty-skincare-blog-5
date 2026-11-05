@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty & Skincare Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header id="home">
+    <h1>Beauty & Skincare Blog</h1>
+    <p>Your guide to healthy and glowing skin</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#tips">Beauty Tips</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <button id="themeToggle" type="button">Dark Mode</button>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>About This Blog</h2>
+        <p>Discover beauty tips, skincare routines and product recommendations.</p>
+    </section>
+
+    <section id="tips">
+        <h2>Beauty Tips</h2>
+
+        <div id="tipsList">
+            <article class="tip">
+                <h3>Daily Skincare</h3>
+                <p>Cleanse your face regularly and moisturize your skin.</p>
+            </article>
+
+            <article class="tip">
+                <h3>Sun Protection</h3>
+                <p>Use sunscreen to help protect your skin from UV rays.</p>
+            </article>
+
+            <article class="tip">
+                <h3>Stay Hydrated</h3>
+                <p>Drink enough water and follow a suitable skincare routine.</p>
+            </article>
+        </div>
+
+        <button id="toggleTips" type="button">Show / Hide Tips</button>
+    </section>
+
+    <section id="products">
+        <h2>Skincare Products</h2>
+
+        <label for="skinType">Choose skin type:</label>
+        <select id="skinType">
+            <option value="all">All</option>
+            <option value="dry">Dry</option>
+            <option value="oily">Oily</option>
+            <option value="normal">Normal</option>
+        </select>
+
+        <div class="products">
+            <article class="product" data-skin="dry">
+                <h3>Moisturizer</h3>
+                <p>For dry skin</p>
+            </article>
+
+            <article class="product" data-skin="oily">
+                <h3>Face Cleanser</h3>
+                <p>For oily skin</p>
+            </article>
+
+            <article class="product" data-skin="normal">
+                <h3>Daily Sunscreen</h3>
+                <p>For normal skin</p>
+            </article>
+        </div>
+
+        <p id="productMessage" aria-live="polite"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" maxlength="20"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email"
+                   placeholder="Enter email with @" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" maxlength="200"
+                      placeholder="Write your message"
+                      required></textarea>
+
+            <p class="counter">
+                Characters: <span id="charCount">0</span>/200
+            </p>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="result" aria-live="polite"></p>
+    </section>
+</main>
+
+<footer>
+    <p>Beauty & Skincare Blog</p>
+    <a href="#home">Back to Top ↑</a>
+</footer>
+
+</body>
+</html>
